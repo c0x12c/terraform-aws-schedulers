@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0]() (2025-07-15)
+
+### BREAKING CHANGES
+
+* Move module to `c0x12c` GitHub Org and deploy module to Terraform Registry.
+* Update module source and version in README example.
+
 ## [0.1.8]() (2024-12-09)
 
 ### Fixed Bugs
@@ -19,4 +26,3 @@ All notable changes to this project will be documented in this file.
 ### Features
 
 * Initial commit with all the code
-
