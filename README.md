@@ -15,10 +15,11 @@ This module will create:
 ```hcl
 module "scheduler" {
   source  = "c0x12c/schedulers/aws"
-  version = "1.0.0"
+  version = "1.1.0"
 
-  sqs_arn             = module.sqs-project-service-connection.queue.arn
-  schedule_expression = "cron(0 0/1 * * ? *)"
+  sqs_arn                      = module.sqs-project-service-connection.queue.arn
+  schedule_expression          = "cron(0 0/1 * * ? *)"
+  schedule_expression_timezone = "UTC"
   message_body = jsonencode({
     type = "cronjob"
     kind = "example-payload"
@@ -66,6 +67,7 @@ No modules.
 | <a name="input_queue_url"></a> [queue\_url](#input\_queue\_url)                               | The URL of the SQS queue                                                 | `string` | null    |   yes    |
 | <a name="input_sqs_arn"></a> [sqs\_arn](#input\_sqs\_arn)                                     | The ARN of the target SQS queue where messages will be sent.             | `string` | null    |   yes    |
 | <a name="input_schedule_expression"></a> [schedule\_expression](#input\_schedule\_expression) | A cron schedule expression defining when the task runs.                  | `string` | null    |    no    |
+| <a name="input_schedule_expression_timezone"></a> [schedule\_expression\_timezone](#input\_schedule\_expression\_timezone) | (Optional) Timezone in which the scheduling expression is evaluated. Defaults to UTC | `string` | `"UTC"` |    no    |
 
 ## Outputs
 
@@ -111,6 +113,7 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | The base name for resources, used to create unique resource identifiers. | `string` | n/a | yes |
 | <a name="input_queue_url"></a> [queue\_url](#input\_queue\_url) | The URL of the SQS queue | `string` | n/a | yes |
 | <a name="input_schedule_expression"></a> [schedule\_expression](#input\_schedule\_expression) | A cron schedule expression defining when the task runs | `string` | n/a | yes |
+| <a name="input_schedule_expression_timezone"></a> [schedule\_expression\_timezone](#input\_schedule\_expression\_timezone) | (Optional) Timezone in which the scheduling expression is evaluated. Defaults to UTC | `string` | `"UTC"` | no |
 | <a name="input_sqs_arn"></a> [sqs\_arn](#input\_sqs\_arn) | The ARN of the target SQS queue where messages will be sent. | `string` | n/a | yes |
 
 ## Outputs

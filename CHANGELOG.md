@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0]() (2026-02-25)
+
+### Features
+
+* Add `schedule_expression_timezone` input variable to support timezone-aware scheduling (defaults to UTC)
+
 ## [1.0.0]() (2025-07-15)
 
 ### BREAKING CHANGES

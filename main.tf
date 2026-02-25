@@ -10,7 +10,8 @@ resource "aws_scheduler_schedule" "this" {
     mode = "OFF"
   }
 
-  schedule_expression = var.schedule_expression
+  schedule_expression          = var.schedule_expression
+  schedule_expression_timezone = var.schedule_expression_timezone
 
   target {
     arn      = "arn:aws:scheduler:::aws-sdk:sqs:sendMessage"
