@@ -83,6 +83,7 @@ No modules.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.8 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.75 |
 
 ## Providers
@@ -113,7 +114,7 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | The base name for resources, used to create unique resource identifiers. | `string` | n/a | yes |
 | <a name="input_queue_url"></a> [queue\_url](#input\_queue\_url) | The URL of the SQS queue | `string` | n/a | yes |
 | <a name="input_schedule_expression"></a> [schedule\_expression](#input\_schedule\_expression) | A cron schedule expression defining when the task runs | `string` | n/a | yes |
-| <a name="input_schedule_expression_timezone"></a> [schedule\_expression\_timezone](#input\_schedule\_expression\_timezone) | (Optional) Timezone in which the scheduling expression is evaluated. Defaults to UTC | `string` | `"UTC"` | no |
+| <a name="input_schedule_expression_timezone"></a> [schedule\_expression\_timezone](#input\_schedule\_expression\_timezone) | (Optional) Timezone in which the scheduling expression is evaluated. Defaults to UTC | `string` | `null` | no |
 | <a name="input_sqs_arn"></a> [sqs\_arn](#input\_sqs\_arn) | The ARN of the target SQS queue where messages will be sent. | `string` | n/a | yes |
 
 ## Outputs
