@@ -22,3 +22,9 @@ variable "schedule_expression" {
   description = "A cron schedule expression defining when the task runs"
   type        = string
 }
+
+variable "schedule_expression_timezone" {
+  description = "(Optional) Timezone in which the scheduling expression is evaluated. Defaults to UTC"
+  default     = null
+  type        = string
+}
