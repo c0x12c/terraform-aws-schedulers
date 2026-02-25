@@ -25,6 +25,6 @@ variable "schedule_expression" {
 
 variable "schedule_expression_timezone" {
   description = "(Optional) Timezone in which the scheduling expression is evaluated. Defaults to UTC"
-  default     = "UTC"
+  default     = null
   type        = string
 }
